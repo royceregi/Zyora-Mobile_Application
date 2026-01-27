@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Blue Palette for Wellness -->
+    <color name="primary_blue">#66B2D6</color>           <!-- Dreamy Blue -->
+    <color name="primary_blue_dark">#4A90B8</color>      <!-- Darker variant -->
+    <color name="primary_blue_light">#85C5E0</color>     <!-- Lighter variant -->
+    
+    <!-- Background Colors -->
+    <color name="background_light">#E6FAF5</color>       <!-- Pale Aqua -->
+    <color name="surface_light">#F8FDFC</color>          <!-- Very light aqua -->
+    <color name="card_background_light">#FFFFFF</color>   <!-- White cards -->
+    
+    <!-- Accent Colors -->
+    <color name="accent_teal">#00BCD4</color>            <!-- Teal for hydration -->
+    <color name="accent_green">#4CAF50</color>           <!-- Green for progress -->
+    <color name="accent_orange">#FF9800</color>          <!-- Orange for warnings -->
+    <color name="accent_red">#F44336</color>              <!-- Red for delete/error -->
+    
+    <!-- Text Colors -->
+    <color name="text_primary_light">#1E3D59</color>     <!-- Deep Lagoon -->
+    <color name="text_secondary_light">#5A7A94</color>   <!-- Medium blue-gray -->
+    <color name="text_hint_light">#8FA8B8</color>        <!-- Light blue-gray -->
+    
+    <!-- Status Colors -->
+    <color name="success_green">#2E7D32</color>
+    <color name="warning_orange">#F57C00</color>
+    <color name="error_red">#D32F2F</color>
+    
+    <!-- Mood Colors -->
+    <color name="mood_happy">#FFC107</color>             <!-- Amber -->
+    <color name="mood_sad">#3F51B5</color>               <!-- Indigo -->
+    <color name="mood_neutral">#607D8B</color>           <!-- Blue Gray -->
+    <color name="mood_excited">#E91E63</color>           <!-- Pink -->
+    <color name="mood_anxious">#9C27B0</color>           <!-- Purple -->
+</resources>

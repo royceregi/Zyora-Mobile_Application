@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardMood"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/card_background_light"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Mood Color Indicator -->
+        <View
+            android:id="@+id/viewMoodColor"
+            android:layout_width="4dp"
+            android:layout_height="0dp"
+            android:background="@color/primary_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Mood Emoji -->
+        <TextView
+            android:id="@+id/tvMoodEmoji"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="12dp"
+            android:gravity="center"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@id/viewMoodColor"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="😊" />
+
+        <!-- Mood Name -->
+        <TextView
+            android:id="@+id/tvMoodName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="@color/text_primary_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintStart_toEndOf="@id/tvMoodEmoji"
+            app:layout_constraintTop_toTopOf="@id/tvMoodEmoji"
+            tools:text="Happy" />
+
+        <!-- Date and Time -->
+        <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary_light"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/tvMoodName"
+            app:layout_constraintStart_toStartOf="@id/tvMoodName"
+            app:layout_constraintTop_toBottomOf="@id/tvMoodName"
+            tools:text="2024-10-09 at 14:30" />
+
+        <!-- Intensity -->
+        <TextView
+            android:id="@+id/tvIntensity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_hint_light"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="@id/tvMoodName"
+            app:layout_constraintStart_toStartOf="@id/tvMoodName"
+            app:layout_constraintTop_toBottomOf="@id/tvDateTime"
+            tools:text="Intensity: High" />
+
+        <!-- Note -->
+        <TextView
+            android:id="@+id/tvNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/note_background"
+            android:padding="8dp"
+            android:textColor="@color/text_secondary_light"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvMoodEmoji"
+            app:layout_constraintTop_toBottomOf="@id/tvMoodEmoji"
+            tools:text="Had a great day at work! Completed all my tasks and felt very productive."
+            tools:visibility="visible" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/text_hint_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

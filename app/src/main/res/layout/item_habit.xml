@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardHabit"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardBackgroundColor="@color/card_background_light"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Habit Icon -->
+        <ImageView
+            android:id="@+id/ivHabitIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_habits"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/primary_blue" />
+
+        <!-- Habit Name -->
+        <TextView
+            android:id="@+id/tvHabitName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_primary_light"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/tvPercentage"
+            app:layout_constraintStart_toEndOf="@id/ivHabitIcon"
+            app:layout_constraintTop_toTopOf="@id/ivHabitIcon"
+            tools:text="Drink Water" />
+
+        <!-- Habit Description -->
+        <TextView
+            android:id="@+id/tvHabitDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_secondary_light"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@id/tvHabitName"
+            app:layout_constraintStart_toStartOf="@id/tvHabitName"
+            app:layout_constraintTop_toBottomOf="@id/tvHabitName"
+            tools:text="Stay hydrated throughout the day" />
+
+        <!-- Percentage -->
+        <TextView
+            android:id="@+id/tvPercentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/accent_green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvHabitName"
+            tools:text="75%" />
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="8dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:progressTint="@color/primary_blue"
+            app:layout_constraintEnd_toStartOf="@id/btnDecrement"
+            app:layout_constraintStart_toStartOf="@id/tvHabitName"
+            app:layout_constraintTop_toBottomOf="@id/tvHabitDescription"
+            tools:progress="6" />
+
+        <!-- Progress Text -->
+        <TextView
+            android:id="@+id/tvProgress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/text_secondary_light"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@id/progressBar"
+            app:layout_constraintStart_toStartOf="@id/progressBar"
+            app:layout_constraintTop_toBottomOf="@id/progressBar"
+            tools:text="6 / 8 glasses" />
+
+        <!-- Decrement Button -->
+        <ImageButton
+            android:id="@+id/btnDecrement"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="Decrease"
+            android:src="@drawable/ic_remove"
+            app:layout_constraintBottom_toBottomOf="@id/progressBar"
+            app:layout_constraintEnd_toStartOf="@id/btnIncrement"
+            app:layout_constraintTop_toTopOf="@id/progressBar"
+            app:tint="@color/text_secondary_light" />
+
+        <!-- Increment Button -->
+        <ImageButton
+            android:id="@+id/btnIncrement"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="@drawable/circle_button_background"
+            android:contentDescription="Increase"
+            android:src="@drawable/ic_add"
+            app:layout_constraintBottom_toBottomOf="@id/progressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/progressBar"
+            app:tint="@color/primary_blue" />
+
+        <!-- Edit and Delete Buttons -->
+        <ImageButton
+            android:id="@+id/btnEdit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginEnd="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Edit habit"
+            android:src="@drawable/ic_edit"
+            app:layout_constraintEnd_toStartOf="@id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/text_secondary_light" />
+
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Delete habit"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/text_secondary_light" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

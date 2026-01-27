@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/ic_zyora_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_zyora_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Zyora">
+        
+        <!-- Get Started Activity (Launcher) -->
+        <activity
+            android:name=".ui.auth.GetStartedActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Zyora">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Authentication Activities -->
+        <activity
+            android:name=".ui.auth.RegisterActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.auth.GetStartedActivity" />
+
+        <activity
+            android:name=".ui.auth.LoginActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.auth.GetStartedActivity" />
+
+        <activity
+            android:name=".ui.auth.ProfileActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <!-- Habit Reminder Broadcast Receiver -->
+        <receiver
+            android:name=".utils.HabitReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- Hydration Reminder Broadcast Receivers -->
+        <receiver
+            android:name=".utils.HydrationReminderReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <receiver
+            android:name=".utils.HydrationQuickAddReceiver"
+            android:enabled="true"
+            android:exported="false" />
+
+        <!-- App Widget -->
+        <receiver
+            android:name=".widget.HabitProgressWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+    </application>
+
+</manifest>

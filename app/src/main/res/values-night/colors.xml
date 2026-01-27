@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Primary Blue Palette for Wellness (Dark Mode) -->
+    <color name="primary_blue">#5BA3CC</color>           <!-- Slightly muted dreamy blue -->
+    <color name="primary_blue_dark">#3E7FA3</color>      <!-- Darker variant -->
+    <color name="primary_blue_light">#7BB8D6</color>     <!-- Lighter variant -->
+    
+    <!-- Background Colors (Dark Mode) -->
+    <color name="background_light">#1E3D59</color>       <!-- Deep Lagoon -->
+    <color name="surface_light">#2A4A66</color>          <!-- Slightly lighter lagoon -->
+    <color name="card_background_light">#345473</color>   <!-- Card background -->
+    
+    <!-- Accent Colors (Dark Mode) -->
+    <color name="accent_teal">#26C6DA</color>            <!-- Brighter teal for contrast -->
+    <color name="accent_green">#66BB6A</color>           <!-- Brighter green -->
+    <color name="accent_orange">#FFB74D</color>          <!-- Softer orange -->
+    
+    <!-- Text Colors (Dark Mode) -->
+    <color name="text_primary_light">#E1F5FE</color>     <!-- Very light blue -->
+    <color name="text_secondary_light">#B3E5FC</color>   <!-- Light blue -->
+    <color name="text_hint_light">#81D4FA</color>        <!-- Medium light blue -->
+    
+    <!-- Status Colors (Dark Mode) -->
+    <color name="success_green">#4CAF50</color>
+    <color name="warning_orange">#FF9800</color>
+    <color name="error_red">#F44336</color>
+    
+    <!-- Mood Colors (Dark Mode - same as light for consistency) -->
+    <color name="mood_happy">#FFC107</color>             <!-- Amber -->
+    <color name="mood_sad">#3F51B5</color>               <!-- Indigo -->
+    <color name="mood_neutral">#607D8B</color>           <!-- Blue Gray -->
+    <color name="mood_excited">#E91E63</color>           <!-- Pink -->
+    <color name="mood_anxious">#9C27B0</color>           <!-- Purple -->
+    <color name="mood_very_happy">#4CAF50</color>
+    <color name="mood_very_sad">#F44336</color>
+    <color name="mood_angry">#E91E63</color>
+    <color name="mood_calm">#00BCD4</color>
+    <color name="mood_tired">#607D8B</color>
+    
+    <!-- Transparent -->
+    <color name="transparent">#00000000</color>
+    
+    <!-- Bottom navigation colors -->
+    <color name="bottom_nav_color">@color/primary_blue</color>
+</resources>
